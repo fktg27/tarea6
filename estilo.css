@@ -1,0 +1,22 @@
+#contenedor{
+    width:75%;
+    height: auto;
+    border:1px solid red;
+    margin:auto;
+}
+h3{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding:10px;
+}
+#resultado{
+    display: flex;
+    height: 160px;
+    background-color: azure;
+    margin:20px;
+    color:black;
+    text-align: center;
+    justify-content: center;
+    border:2px solid black;
+}

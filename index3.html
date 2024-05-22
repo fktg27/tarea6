@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <h3>3.	Una frutería ofrece las manzanas con descuento según la siguiente tabla:
+            NUM. DE KILOS COMPRADOS      % DESCUENTO
+            0-2                                            0%
+            2.01-5                                         10%
+            5.01-10                                        15%
+            10.01 en adelante                       20%
+            Determinar cuánto pagara una persona que compre manzanas es esa frutería.
+            </h3>
+        <div id="resultado">
+            <script>
+                //aqui ingresaremos nuestro codigo Java Script
+
+                //1. Declaracion de variables
+                var costo,kilos,mensaje;
+                //2. Fase entrada/lectura de datos
+                    
+                    kilos=parseInt(prompt("ingrese la cantidad de kilogramos que decea comprar"));
+                    costo=parseInt(prompt("ingrese el precio de 1 kilogramo de manzanas"));
+                //3. Fase del procesamiento de datos
+                    preciobruto=costo*kilos
+                if (kilos<=2) {
+                    mensaje="el costo es de: "+preciobruto;
+                    mensaje2="no aplica descuento";
+                } else {
+                    if (kilos<=5) {
+                    preciofinal=preciobruto-(preciobruto*0.1);
+                    mensaje="el costo es de: "+preciofinal+" soles";
+                    mensaje2="el costo fue aplicado con un descuento del 10%";
+                    } else {
+                    if (kilos<=10) {
+                    preciofinal=preciobruto-(preciobruto*0.15);
+                    mensaje="el costo es de: "+preciofinal+" soles";
+                    mensaje2="el costo fue aplicado con un descuento del 15%";
+                    } else {
+                    preciofinal=preciobruto-(preciobruto*0.2);
+                    mensaje="el costo es de: "+preciofinal+" soles";
+                    mensaje2="el costo fue aplicado con un descuento del 20%";   
+                    }    
+                    }
+                }
+               
+                //4. Fase de salida
+                document.write("detalles de venta" + "<br>");
+                document.write(mensaje + "<br>");
+                document.write(mensaje2 + "<br>");
+
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

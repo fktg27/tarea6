@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>1.En una llantería se ha establecido una promoción de las llantas marca «Ponchadas», dicha promoción consiste en lo siguiente:
+            Si se compran menos de cinco llantas el precio es de $30000 cada una, de $25000 si se compran de cinco a 10 y de $20000 si se compran más de 10.
+            Obtener la cantidad de dinero que una persona tiene que pagar por cada una de las llantas que compra y la que tiene que pagar por el total de la compra.
+            </h3>
+        <div id="resultado">
+            <script>
+                //aqui ingresaremos nuestro codigo Java Script
+
+                //1. Declaracion de variables
+                var cant,mensaje;
+                //2. Fase entrada/lectura de datos
+                cant=parseInt(prompt("ingrese la cantidad de llantas que decea comprar"));
+
+                //3. Fase del procesamiento de datos
+                
+                if (cant<5) {
+                    valor=cant*30000;
+                    mensaje="el precio final es de: "+valor;
+                    mensaje1="valor unitario: 30000";
+                } else {
+                    if (cant>=5 && cant<=10) {
+                        valor=cant*25000;
+                        mensaje="el precio final es de: "+valor;
+                        mensaje1="valor unitario: 25000";
+                    } else {
+                        valor=cant*20000;
+                        mensaje="el precio final es de: "+valor;
+                        mensaje1="valor unitario: 20000";
+                    }
+                }
+                
+                //4. Fase de salida
+                document.write("detalles de venta"+"<br>");
+                document.write("cantidad: "+cant+"<br>");
+                document.write(mensaje1+"<br>");
+                document.write(mensaje+"<br>");
+
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <h3>4.	El promedio de prácticas de un curso se calcula con base en cuatro prácticas calificadas de las cuales se elimina la nota menor y se promedian las tres notas más altas. Diseñe un algoritmo que determine la nota eliminada y el promedio de prácticas de un estudiante.
+            </h3>
+        <div id="resultado">
+            <script>
+                //aqui ingresaremos nuestro codigo Java Script
+
+                //1. Declaracion de variables
+                var nota1,nota2,nota3,nota4,nombre,mensaje;
+                //2. Fase entrada/lectura de datos
+                    nombre=prompt("ingrese el nombre del alumno")
+                    nota1=parseInt(prompt("ingrese la nota 1"));
+                    nota2=parseInt(prompt("ingrese la nota 2"));
+                    nota3=parseInt(prompt("ingrese la nota 3"));
+                    nota4=parseInt(prompt("ingrese la nota 4"));
+                //3. Fase del procesamiento de datos
+                if (nota1<nota2 && nota1<nota3 && nota1<nota4) {
+                    prom=(nota2+nota3+nota4)/3;
+                    mensaje="su promedio es: "+prom;
+                    mensaje2="no se considero la nota 1 por ser la menor nota";
+                } else {
+                    if (nota2<nota1 && nota2<nota3 && nota2<nota4) {
+                    
+                    } else {
+                        if (nota3<nota1 && nota3<nota2 && nota3<nota4) {
+                            prom=(nota1+nota2+nota4)/3;
+                    mensaje="su promedio es: "+prom;
+                    mensaje2="no se considero la nota 3 por ser la menor nota";         
+                        } else {
+                            if (nota4<nota1 && nota4<nota2 && nota4<nota3) {
+                                prom=(nota1+nota2+nota3)/3;
+                    mensaje="su promedio es: "+prom;
+                    mensaje2="no se considero la nota 4 por ser la menor nota"; 
+                            } else {
+                                prom=(nota1+nota2+nota3+nota4)/4
+                                mensaje="su promedio es: "+prom;
+                            }
+                        }
+                    }
+                }
+               
+                //4. Fase de salida
+                document.write("detalles de venta" + "<br>");
+                document.write("nombre del alumno "+nombre+"<br>")
+                document.write(mensaje + "<br>");
+                document.write(mensaje2 + "<br>");
+
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <h3>
+            </h3>
+        <div id="resultado">
+            <script>
+                //aqui ingresaremos nuestro codigo Java Script
+
+                //1. Declaracion de variables
+                var nombre,nh,edad,sexo,mensaje;
+                //2. Fase entrada/lectura de datos
+                    nombre=prompt("ingrese el nombre del paciente")
+                    nh=parseInt(prompt("ingrese el nivel de hemoglobina del paciente"));
+                    edad=parseInt(prompt("ingrese la edad del paciente (si es menor de 1 año colocar 0)"));
+                    meses=parseInt(prompt("ingrese los meses edad del paciente(si es mayor a 1 año colocar 0)"))
+                    dias=parseInt(prompt("ingrese los dias de edad de paciente si es mayor a 30 dias colocar 0"))
+                    sexo=prompt("ingrese el sexo del paciente")
+                //3. Fase del procesamiento de datos
+                if (dias<=30 && nh>=13 && nh<=26) {
+                    mensaje="usted esta en el rango saludable de hemoglobina, no tiene anemia";
+                    mensaje2="edad del paciente: "+dias;
+                } else {
+                    mensaje="usted no esta en el rango saludable de hemoglobina,tiene anemia";
+                    mensaje2="edad del paciente: "+dias;
+                }
+                
+                if (meses<=6 && meses>=1 && nh>=10 && nh<=18) {
+                    mensaje="usted esta en el rango saludable de hemoglobina, no tiene anemia";
+                    mensaje2="edad del paciente: "+meses;
+                } else {
+                   if (meses>6 && meses<=12 && nh>=11 && nh<=15) {
+                    mensaje="usted esta en el rango saludable de hemoglobina, no tiene anemia";
+                    mensaje2="edad del paciente: "+meses;
+                   } else {
+                    mensaje="usted no esta en el rango saludable de hemoglobina,tiene anemia";
+                    mensaje2="edad del paciente: "+meses;
+                   }
+                }
+
+                if (edad>1 && edad<=5 && nh>=11.5 && nh<=15) {
+                    mensaje="usted esta en el rango saludable de hemoglobina, no tiene anemia";
+                    mensaje2="edad del paciente: "+edad;
+                } else {
+                    if (edad>5 && edad<=10 && nh>=12.6 && nh<=15.5) {
+                        mensaje="usted esta en el rango saludable de hemoglobina, no tiene anemia";
+                        mensaje2="edad del paciente: "+edad;
+                    } else {
+                    if (edad>10 && edad<=15 && nh>=13 && nh<=15.5) {
+                        mensaje="usted esta en el rango saludable de hemoglobina, no tiene anemia";
+                        mensaje2="edad del paciente: "+edad;
+                    } else {
+                     if (edad>15) {
+                        mensaje="su edad debe ser menor o igual a 15 años para poder dar el diagnostico intente en otro programa";
+                        mensaje2="edad del paciente: "+edad;
+                     } else {
+                        mensaje="usted no esta en el rango saludable de hemoglobina,tiene anemia";
+                        mensaje2="edad del paciente: "+edad;
+                     }   
+                    }    
+                    }
+                }
+
+                //4. Fase de salida
+                document.write("detalles de venta" + "<br>");
+                document.write("nombre del paciente: "+nombre+"<br>")
+                document.write("sexo del paciente: "+sexo+"<br>")
+                document.write(mensaje2+"<br>")
+                document.write("hemoglobina del paciente: "+nh+"<br>")
+                document.write(mensaje + "<br>");
+                
+
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>
